@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 public class Fase2 {
 	  public static void main(String[] args) {
@@ -14,9 +15,10 @@ public class Fase2 {
 			        arrayOfCities[i] = scan.nextLine();
 			}
 			    
-			//Now show your friend's name one by one
+			//Now show your cities's name one by one in alphabetic order
+			Arrays.sort(arrayOfCities);
 			for (int i = 0; i < arrayOfCities.length; i++) {
-				System.out.print("My cities are " + (i+1) + " : ");
+				System.out.print("My cities in alphabetic order are : ");
 			        System.out.print(arrayOfCities[i] + "\n");
 			}
 			scan.close();
