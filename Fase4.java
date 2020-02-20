@@ -4,18 +4,18 @@ import java.util.Stack;
 class Fase4
 {
 	// Function to reverse a given string using a stack and character array
-	public static String reverse(String str)
+	public static String reverse(String nomCiutat)
 	{
 		// return if string is null or empty
-		if (str == null || str.equals(" "))
-			return str;
+		if (nomCiutat == null || nomCiutat.equals(" "))
+			return nomCiutat;
 
 		// create an empty stack of characters
 		Stack<Character> stack = new Stack<Character>();
 
 		// push every character of the given string into the stack
-		char[] ch = str.toCharArray();
-		for (int i = 0; i < str.length(); i++)
+		char[] ch = nomCiutat.toCharArray();
+		for (int i = 0; i < nomCiutat.length(); i++)
 			stack.push(ch[i]);
 		
 		// start from index 0
@@ -47,10 +47,10 @@ class Fase4
 		String city6 = myObj.nextLine();  // Read user input
 		String allCities = (city1 + " " + city2 + " " + city3 + " " + city4 + " " + city5 + " " + city6);
 		
-		String str = allCities;
-		str = reverse(str);
+		String nomCiutat = allCities;
+		nomCiutat = reverse(nomCiutat);
 
-		System.out.println("Reverse of the given strings is : " + str);
+		System.out.println("Reverse of the given strings is : " + nomCiutat);
 		myObj.close();
 	}
 
